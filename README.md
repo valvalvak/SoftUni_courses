@@ -1,2 +1,0 @@
-# SoftUni Courses
- Learnig Python
