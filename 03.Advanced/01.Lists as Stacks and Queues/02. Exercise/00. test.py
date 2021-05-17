@@ -19,6 +19,8 @@
 # #         print(min(queue))
 # #
 # # print(", ".join(map(str, reversed(queue))))
+
+
 # queries = int(input())
 #
 # queue = []
