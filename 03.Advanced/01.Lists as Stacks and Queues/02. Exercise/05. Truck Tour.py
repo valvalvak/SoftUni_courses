@@ -12,25 +12,27 @@ for i in range(gas_stations):
         queue.append(int(distance))
 
 tank = 0
-counter = 0
+circle_index = 0
+negative_circle_counter = 0
 index = deque()
 
-while queue:
-    if not len(queue) > abs(counter):
-        break
+while True:
+    fuel = queue[0]
+    distance = queue[1]
+    if tank + fuel >= distance:
+        tank += fuel - distance
+        index.append(circle_index)
+        negative_circle_counter = 0
     else:
-        fuel = queue[0]
-        distance = queue[1]
-        difference = abs(distance - fuel)
-        if fuel + tank >= distance:
-            tank += difference
-            index.append(counter)
-        else:
-            if index:
-                index.popleft()
-            tank = 0
+        index = deque()
+        tank = 0
+        negative_circle_counter += 1
+    if negative_circle_counter >= len(queue):
+        break
+    elif len(index) >= len(queue):
+        break
+    circle_index += 1
     queue.rotate(-2)
-    counter += 1
 
 if index:
     print(index.popleft())
