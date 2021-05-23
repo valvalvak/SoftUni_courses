@@ -14,20 +14,23 @@ for i in range(gas_stations):
 tank = 0
 counter = 0
 index = deque()
-while_break_case = len(queue)
 
 while queue:
-    counter += 1
-    fuel = queue.popleft()
-    distance = queue.popleft()
-    difference = distance - fuel
-    if fuel >= distance + tank:
-        tank += difference
-        index.append(counter - 1)
-        continue
-    else:
-        queue.append(fuel)
-        queue.append(distance)
-    if counter >= while_break_case:
+    if not len(queue) > abs(counter):
         break
-print(index.popleft())
+    else:
+        fuel = queue[0]
+        distance = queue[1]
+        difference = abs(distance - fuel)
+        if fuel + tank >= distance:
+            tank += difference
+            index.append(counter)
+        else:
+            if index:
+                index.popleft()
+            tank = 0
+    queue.rotate(-2)
+    counter += 1
+
+if index:
+    print(index.popleft())

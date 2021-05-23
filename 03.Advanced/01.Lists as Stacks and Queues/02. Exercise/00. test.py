@@ -56,3 +56,27 @@
 #
 # if queue:
 #     print(", ".join(map(str, queue)))
+#
+# from collections import deque
+#
+# food_quantity = int(input())
+# sequence = input().split()
+# lst = [int(i) for i in sequence]
+# queue = deque([int(i) for i in sequence])
+#
+# print(max(queue))
+#
+# for order in lst:
+#
+#     if food_quantity >= order:
+#         queue.popleft()
+#         food_quantity -= order
+#
+#     else:
+#         break
+#
+# if len(queue) > 0:
+#     print(f"Orders left: {' '.join([str(i) for i in queue])}")
+#
+# else:
+#     print(f"Orders complete")
