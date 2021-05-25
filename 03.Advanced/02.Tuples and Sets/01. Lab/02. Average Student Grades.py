@@ -1,4 +1,4 @@
-def input_to_tuple(count):
+def input_to_list(count):
     lines = list()
     for _ in range(count):
         lines.append(input())
@@ -6,7 +6,7 @@ def input_to_tuple(count):
 
 
 n = int(input())
-students_grades_lines = input_to_tuple(n)
+students_grades_lines = input_to_list(n)
 
 students_grades = {}
 
