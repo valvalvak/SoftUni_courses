@@ -7,7 +7,7 @@ for i in range(gas_stations):
     if i > 1000001:
         break
     fuel, distance = input().split()
-    if 1 <= int(fuel) <= 1000000000 and 1 <= int(distance) <= 1000000000:
+    if 1 <= int(fuel) <= 10 ** 8 and 1 <= int(distance) <= 10 ** 8:
         queue.append(int(fuel))
         queue.append(int(distance))
 
