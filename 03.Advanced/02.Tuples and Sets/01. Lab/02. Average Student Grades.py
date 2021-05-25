@@ -5,8 +5,7 @@ def input_to_list(count):
     return lines
 
 
-n = int(input())
-students_grades_lines = input_to_list(n)
+students_grades_lines = input_to_list(int(input()))
 
 students_grades = {}
 
