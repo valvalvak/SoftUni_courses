@@ -6,7 +6,7 @@ current_capacity = capacity
 
 while len(box) > 0:
     current_clothes_value = box.pop()
-    if current_capacity > current_clothes_value:
+    if current_capacity >= current_clothes_value:
         current_capacity -= current_clothes_value
     else:
         racks_counter += 1
