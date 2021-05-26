@@ -47,7 +47,7 @@ def print_result(guests):
 #     "SVQXQCbc",
 #     "tSzE5t0p",
 # ]
-# guests_arrived = [
+# guest_arrived = [
 #     "9NoBUajQ",
 #     "Ce8vwPmE",
 #     "SVQXQCbc",
