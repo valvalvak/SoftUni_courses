@@ -7,32 +7,27 @@ for i in range(gas_stations):
     if i > 1000001:
         break
     fuel, distance = input().split()
-    if 1 <= int(fuel) <= 10 ** 8 and 1 <= int(distance) <= 10 ** 8:
+    if 1 <= int(fuel) <= 1000000000 and 1 <= int(distance) <= 1000000000:
         queue.append(int(fuel))
         queue.append(int(distance))
 
 tank = 0
-circle_index = 0
-negative_circle_counter = 0
+counter = 0
 index = deque()
+while_break_case = len(queue)
 
-while True:
-    fuel = queue[0]
-    distance = queue[1]
-    if tank + fuel >= distance:
-        tank += fuel - distance
-        index.append(circle_index)
-        negative_circle_counter = 0
+while queue:
+    counter += 1
+    fuel = queue.popleft()
+    distance = queue.popleft()
+    difference = distance - fuel
+    if fuel >= distance + tank:
+        tank += difference
+        index.append(counter - 1)
+        continue
     else:
-        index = deque()
-        tank = 0
-        negative_circle_counter += 1
-    if negative_circle_counter >= len(queue):
+        queue.append(fuel)
+        queue.append(distance)
+    if counter >= while_break_case:
         break
-    elif len(index) >= len(queue):
-        break
-    circle_index += 1
-    queue.rotate(-2)
-
-if index:
-    print(index.popleft())
+print(index.popleft())
