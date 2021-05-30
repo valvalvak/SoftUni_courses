@@ -1,10 +1,8 @@
-def read_matrix(rows):
-    matrix_build = []
-
+def build_matrix(rows):
+    main_matrix = []
     for i in range(rows):
-        matrix_build.append([int(x) for x in input().split(", ")])
-
-    return matrix_build
+        main_matrix.append([int(x) for x in input().split(", ")])
+    return main_matrix
 
 
 def get_sum_sub_matrix(matrix, row_index, column_index, size):
@@ -43,6 +41,6 @@ def print_result(coordinates, size):
 SUB_MATRIX_SIZE = 2
 
 rows, columns = [int(x) for x in input().split(", ")]
-matrix = read_matrix(rows)
+matrix = build_matrix(rows)
 sub_matrix = get_highest_most_left_square_matrix(matrix, SUB_MATRIX_SIZE)
 print_result(sub_matrix, SUB_MATRIX_SIZE)
