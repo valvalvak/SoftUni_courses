@@ -1,12 +1,33 @@
-def draw_mattrix(rows):
-    mattrix = []
+def read_matrix(rows):
+    matrix_read = []
 
     for i in range(rows):
-        mattrix.append([int(x) for x in input().split(" ")])
+        matrix_read.append([int(x) for x in input().split(" ")])
 
-    return mattrix
+    return matrix_read
 
 
-input_range = [int(x) for x in input().split(", ")]
+def sum_col_as_list(rows, column, current_matrix):
+    column_sums = []
+    for col in range(column):
+        column_sums.append(int(0))
+        for row in range(rows):
+            column_sums[col] += current_matrix[row][col]
+    return column_sums
 
-mattrix = draw_mattrix(input_range[0])
+
+# def print_solution(solution):
+#     for element in solution:
+#         print(element)
+
+
+given_rows, given_columns = [int(x) for x in input().split(", ")]
+
+matrix = read_matrix(given_rows)
+
+matrix_columns_sums = sum_col_as_list(given_rows, given_columns, matrix)
+
+# print_result = print_solution(matrix_columns_sums)
+
+for element in matrix_columns_sums:
+    print(element)
