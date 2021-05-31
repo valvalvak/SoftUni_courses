@@ -25,6 +25,4 @@ def mirror_diagonal_sum(matrix):
 
 matrix = read_matrix(int(input()))
 
-result = abs(prime_diagonal_sum(matrix) - mirror_diagonal_sum(matrix))
-
-print(result)
+print(abs(prime_diagonal_sum(matrix) - mirror_diagonal_sum(matrix)))
