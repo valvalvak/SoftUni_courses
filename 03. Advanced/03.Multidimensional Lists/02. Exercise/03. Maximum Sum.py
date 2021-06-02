@@ -2,7 +2,7 @@ def read_matrix(rows):
     matrix_build = []
 
     for i in range(rows):
-        matrix_build.append([int(x) for x in input().split(", ")])
+        matrix_build.append([int(x) for x in input().split(' ')])
 
     return matrix_build
 
@@ -37,12 +37,12 @@ def print_result(coordinates, size):
         for c in range(col_index, col_index + size):
             row.append(matrix[r][c])
         print(' '.join(str(x) for x in row))
-    print(get_sum_sub_matrix(matrix, row_index, col_index, size))
+    print(f'Sum = {get_sum_sub_matrix(matrix, row_index, col_index, size)}')
 
 
 SUB_MATRIX_SIZE = 3
 
-rows, columns = [int(x) for x in input().split(", ")]
+rows, columns = [int(x) for x in input().split(" ")]
 matrix = read_matrix(rows)
 sub_matrix = get_most_left_square_matrix(matrix, SUB_MATRIX_SIZE)
 print_result(sub_matrix, SUB_MATRIX_SIZE)
