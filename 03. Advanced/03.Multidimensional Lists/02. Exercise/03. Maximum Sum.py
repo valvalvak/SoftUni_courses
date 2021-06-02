@@ -32,12 +32,13 @@ def get_most_left_square_matrix(matrix, sub_matrix_size):
 
 def print_result(coordinates, size):
     (row_index, col_index) = coordinates
+    print(f'Sum = {get_sum_sub_matrix(matrix, row_index, col_index, size)}')
+    
     for r in range(row_index, row_index + size):
         row = []
         for c in range(col_index, col_index + size):
             row.append(matrix[r][c])
         print(' '.join(str(x) for x in row))
-    print(f'Sum = {get_sum_sub_matrix(matrix, row_index, col_index, size)}')
 
 
 SUB_MATRIX_SIZE = 3
