@@ -7,15 +7,24 @@ def read_matrix(rows):
     return matrix_build
 
 
+def sub_matrix_check_for_symbol(matrix, row, col, size):
+    for r in range(row, size):
+        for c in range(col, size):
+            pass
+
+    pass
+
+
 def sub_matrix_counter(matrix, size):
     counter = 0
-    last_symbol = matrix[0][0]
     matrix_size = len(matrix)
     for row_index in range(matrix_size - size + 1):
         for col_index in range(matrix_size - size + 1):
-            if last_symbol == matrix[row_index][col_index + 1] and matrix[row_index + 1]:
+            current_symbol = matrix[row_index][col_index]
+            if not sub_matrix_check_for_symbol(matrix, current_symbol):
+                continue
+            else:
                 counter += 1
-            current_symbol = matrix[row][col]
     return counter
 
 
