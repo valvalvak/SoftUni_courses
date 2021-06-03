@@ -22,7 +22,7 @@ def is_command_valid(command, valid_command, valid_length):
 def are_indices_valid(matrix, command):
     swap, row1, col1, row2, col2 = command.split(' ')
     row1, col1, row2, col2 = int(row1), int(col1), int(row2), int(col2)
-    
+
     try:
         if not matrix[row1][col1]:
             return False
@@ -30,7 +30,7 @@ def are_indices_valid(matrix, command):
             return False
     except:
         return False
-    
+
     else:
         return True
 
@@ -50,23 +50,25 @@ def print_current_swap_result(matrix):
         print(' '.join(str(x) for x in row))
 
 
+def main(matrix, command):
+    while not command == "END":
+
+        if not is_command_valid(command, VALID_COMMAND, VALID_COMMAND_LENGTH):
+            print('Invalid input!')
+
+        elif not are_indices_valid(matrix, command):
+            print('Invalid input!')
+
+        else:
+            current_swap = matrix_swapping(matrix, command)
+            print_current_swap_result(matrix)
+            matrix = current_swap
+        command = input()
+
+    return command
+
+
 VALID_COMMAND = 'swap'
 VALID_COMMAND_LENGTH = len(['swap', 'row1', 'col1', 'row2', 'col2'])
 
-matrix = read_matrix(input())
-
-command = input()
-
-while not command == "END":
-
-    if not is_command_valid(command, VALID_COMMAND, VALID_COMMAND_LENGTH):
-        print('Invalid input!')
-
-    elif not are_indices_valid(matrix, command):
-        print('Invalid input!')
-
-    else:
-        current_swap = matrix_swapping(matrix, command)
-        print_current_swap_result(matrix)
-        matrix = current_swap
-    command = input()
+command = main(matrix=read_matrix(input()), command=input())
