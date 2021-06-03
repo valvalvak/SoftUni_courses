@@ -16,6 +16,7 @@ def get_all_square_in_matrix(matrix):
             squares_in_matrix[row].append(matrix[row + 1][col + 1])
     return squares_in_matrix
 
+
 def get_sum_sub_matrix(matrix, row_index, column_index, size):
     sum_result = 0
     for r in range(row_index, row_index + size):
