@@ -2,7 +2,7 @@ def read_matrix(string_to_split):
     rows, cols = [int(x) for x in string_to_split.split()]
     main_matrix_construction = []
 
-    for i in range(rows):
+    for _ in range(rows):
         main_matrix_construction.append(list(x for x in input().split(' ')))
 
     return main_matrix_construction
