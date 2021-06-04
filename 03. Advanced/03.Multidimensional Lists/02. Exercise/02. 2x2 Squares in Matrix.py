@@ -7,23 +7,20 @@ def read_matrix(rows):
     return matrix_build
 
 
-def sub_matrix_check_for_symbol(matrix, row, col, size):
-    for r in range(row, size):
-        for c in range(col, size):
-            pass
-
-    pass
+def check_if_sub_matrix_exist(character, matrix, row, col, size):
+    for r in range(row, row + size):
+        for c in range(col, col + size):
+            if not character == matrix[r][c]:
+                return False
+    return True
 
 
 def sub_matrix_counter(matrix, size):
     counter = 0
-    matrix_size = len(matrix)
-    for row_index in range(matrix_size - size + 1):
-        for col_index in range(matrix_size - size + 1):
-            current_symbol = matrix[row_index][col_index]
-            if not sub_matrix_check_for_symbol(matrix, current_symbol):
-                continue
-            else:
+    for rows in range(len(matrix) - size + 1):
+        for cols in range(len(matrix[rows]) - size + 1):
+            current_symbol = matrix[rows][cols]
+            if check_if_sub_matrix_exist(current_symbol, matrix, rows, cols, size) is True:
                 counter += 1
     return counter
 

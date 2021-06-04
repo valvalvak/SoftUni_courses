@@ -8,27 +8,33 @@ def read_board():
     return matrix
 
 
+def sub_matrix_positions_to_chek(row, col):
+    positions = [
+        (row - 2, col + 1),
+        (row - 1, col + 2),
+        (row + 1, col + 2),
+        (row + 2, col + 1),
+        (row + 2, col - 1),
+        (row + 1, col - 2),
+        (row - 1, col - 2),
+        (row - 2, col - 1),
+    ]
+    return positions
+
+
 def knights_are_attacking_each_other(matrix):
     knight_positions = find_all_knights(matrix)
-
+    rows_indices_range = len(matrix) - 1
+    cols_indices_range = len(matrix[0]) - 1
     for row, col in knight_positions:
-        positions_to_check = [
-            (row - 2, col + 1),
-            (row - 1, col + 2),
-            (row + 1, col + 2),
-            (row + 2, col + 1),
-            (row + 2, col - 1),
-            (row + 1, col - 2),
-            (row - 1, col - 2),
-            (row - 2, col - 1),
-        ]
+        positions_to_check = sub_matrix_positions_to_chek(row, col)
 
         for position in positions_to_check:
             pos_row, pos_col = position
 
-            if not (0 <= pos_row <= len(matrix) - 1):
+            if not (0 <= pos_row <= rows_indices_range):
                 continue
-            if not (0 <= pos_col <= len(matrix) - 1):
+            elif not (0 <= pos_col <= cols_indices_range):
                 continue
             if matrix[pos_row][pos_col] == 'K':
                 return True
@@ -49,29 +55,21 @@ def find_all_knights(matrix):
 
 def calculate_aggression(matrix, knight_positions):
     aggression_scores = {}
+    rows_indices_range = len(matrix) - 1
+    cols_indices_range = len(matrix[0]) - 1
     for pos in knight_positions:
         row, col = pos
-        positions_to_check = [
-            (row - 2, col + 1),
-            (row - 1, col + 2),
-            (row + 1, col + 2),
-            (row + 2, col + 1),
-            (row + 2, col - 1),
-            (row + 1, col - 2),
-            (row - 1, col - 2),
-            (row - 2, col - 1),
-        ]
+        positions_to_check = sub_matrix_positions_to_chek(row, col)
 
         attacked_count = 0
         for attacked_row, attacked_col in positions_to_check:
-            if not (0 <= attacked_row <= len(matrix) - 1):
+            if not (0 <= attacked_row <= rows_indices_range):
                 continue
-            if not (0 <= attacked_col <= len(matrix) - 1):
+            elif not (0 <= attacked_col <= cols_indices_range):
                 continue
             if matrix[attacked_row][attacked_col] == 'K':
                 attacked_count += 1
-
-        aggression_scores[(row, col)] = attacked_count
+                aggression_scores[(row, col)] = attacked_count
 
     return aggression_scores
 

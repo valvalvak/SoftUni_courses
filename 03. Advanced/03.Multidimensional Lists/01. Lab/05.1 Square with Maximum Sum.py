@@ -1,20 +1,21 @@
-def read_matrix(rows):
-    matrix_build = []
+def build_matrix(rows):
+    main_matrix = []
 
     for i in range(rows):
-        matrix_build.append([int(x) for x in input().split(", ")])
+        main_matrix.append([int(x) for x in input().split(", ")])
 
-    return matrix_build
+    return main_matrix
 
 
-# def get_all_square_in_matrix(matrix):
-#     squares_in_matrix = []
-#     for row in range(len(matrix) - 1):
-#         squares_in_matrix.append([])
-#         for col in range(row, len(matrix[row]) - 1):
-#             squares_in_matrix[row].append(matrix[row][col])
-#             squares_in_matrix[row].append(matrix[row+1][col+1])
-#     return squares_in_matrix
+def get_all_square_in_matrix(matrix):
+    squares_in_matrix = []
+    for row in range(len(matrix) - 1):
+        squares_in_matrix.append([])
+        for col in range(row, len(matrix[row]) - 1):
+            squares_in_matrix[row].append(matrix[row][col])
+            squares_in_matrix[row].append(matrix[row + 1][col + 1])
+    return squares_in_matrix
+
 
 def get_sum_sub_matrix(matrix, row_index, column_index, size):
     sum_result = 0
@@ -52,6 +53,6 @@ def print_result(coordinates, size):
 SUB_MATRIX_SIZE = 2
 
 rows, columns = [int(x) for x in input().split(", ")]
-matrix = read_matrix(rows)
+matrix = build_matrix(rows)
 sub_matrix = get_most_left_square_matrix(matrix, SUB_MATRIX_SIZE)
 print_result(sub_matrix, SUB_MATRIX_SIZE)
