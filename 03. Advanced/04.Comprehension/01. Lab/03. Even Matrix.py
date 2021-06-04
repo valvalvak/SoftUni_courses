@@ -1,0 +1,2 @@
+n = int(input())
+print([list(int(num) for num in input().split(', ') if int(num) % 2 == 0) for _ in range(n)])
