@@ -1,0 +1,1 @@
+print(num for num in input() if num % 2 == 0)
