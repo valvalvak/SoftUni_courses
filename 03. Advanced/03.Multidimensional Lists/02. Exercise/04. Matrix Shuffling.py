@@ -22,7 +22,6 @@ def is_command_valid(command, valid_command, valid_length):
 def are_indices_valid(matrix, command):
     swap, row1, col1, row2, col2 = command.split(' ')
     row1, col1, row2, col2 = int(row1), int(col1), int(row2), int(col2)
-
     try:
         if not matrix[row1][col1]:
             return False
@@ -30,7 +29,6 @@ def are_indices_valid(matrix, command):
             return False
     except:
         return False
-
     else:
         return True
 
