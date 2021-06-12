@@ -51,6 +51,11 @@ with open("03_example.txt", "r") as example_file:
                         file.seek(0), file.truncate(), file.writelines(replaced_strings)  # same as a on new lines
                         # .seek(0) = position at start; .truncate() clears all after position = 0 (.seek(0))
                         # this is how i managed the extra new lines
+                        #
+                        # uncomment following lines to add a log file, to see result of the deleted file
+                        #
+                        # with open("log_file.txt", "a+") as log:
+                        #     log.seek(0), log.truncate(), log.writelines(replaced_strings)
 
                 except FileNotFoundError:
                     print("An error occurred")
