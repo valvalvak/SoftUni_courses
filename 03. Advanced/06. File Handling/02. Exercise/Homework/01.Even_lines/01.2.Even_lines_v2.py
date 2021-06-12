@@ -10,7 +10,7 @@ import re
 
 
 def replace_symbol_regex(row):
-    return re.sub(r"[-,.!?]", "@", row)  # works without escaping special characters
+    return re.sub(r"[-,.!?]", "@", row)  # works without escaping special characters when in []
 
 
 with open("example.txt", "r") as file:
