@@ -30,12 +30,12 @@ while not command_me == "End":
         _, file_to_create = line.split("-")
         file_name = file_to_create
         with open(file_name, "w") as file:
-            file.close()
+            pass
 
     elif line.startswith("Add"):
         _, file_name, line_to_add = line.split("-")
         with open(file_name, "a") as file:
-            file.writelines(line_to_add)
+            file.writelines(line_to_add + "\n")
 
     elif line.startswith("Replace"):
         _, file_name, old_string, new_string = line.split("-")
@@ -43,16 +43,18 @@ while not command_me == "End":
 
         try:
             with open(file_name, "r+") as file:
-                content = "\n".join(file.readlines())
+                content = "".join(file.readlines())
                 replaced_strings = content.replace(old_string, new_string)
                 file.seek(0), file.truncate(), file.writelines(replaced_strings)  # same as a on new lines
+
                 # .seek(0) = position at start; .truncate() clears all after position = 0 (.seek(0))
-                # this is how i managed the extra new lines
-                #
-                # uncomment following lines to add a log file, to see result of the deleted file
-                #
-                with open("log_file.txt", "a+") as log:
-                    log.seek(0), log.truncate(), log.writelines(replaced_strings)
+                # this is how I managed new empty lines but the last one - it's for the next input in other hands :)
+
+                # uncomment following lines for additional log file, to see the result before deleting the file,
+                # or just manually delete the line "Delete-file.txt" form input.
+
+                # with open("log_file.txt", "a+") as log:
+                #     log.seek(0), log.truncate(), log.writelines(replaced_strings)
 
         except FileNotFoundError:
             print("An error occurred")
