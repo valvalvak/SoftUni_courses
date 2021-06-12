@@ -18,13 +18,17 @@ Open the file and replace all the occurrences of the old string with the new str
 "Delete-{file_name}" :
 Delete the file. If the file does not exist, print:
 "An error occurred"
+#######################################################################
+TO USE THIS VERSION IS ONLY WITH "03_example.txt" AT THE SAME DIRECTORY
+#######################################################################
 """
+
 import os
 
 with open("03_example.txt", "r") as example_file:
     for line in example_file:
 
-        if line.startswith("END"):
+        if line.startswith("End"):
             break
 
         else:
@@ -49,11 +53,8 @@ with open("03_example.txt", "r") as example_file:
                         content = "".join(file.readlines())  # here is kept the "new line"("\n") order
                         replaced_strings = content.replace(old_string, new_string)
                         file.seek(0), file.truncate(), file.writelines(replaced_strings)  # same as a on new lines
-                        # .seek(0) = position at start; .truncate() clears all after position = 0 (.seek(0))
-                        # this is how i managed the extra new lines
-                        #
-                        # uncomment following lines to add a log file, to see result of the deleted file
-                        #
+
+                        # uncomment following lines for additional log file, to see the result before deleting the file
                         # with open("log_file.txt", "a+") as log:
                         #     log.seek(0), log.truncate(), log.writelines(replaced_strings)
 

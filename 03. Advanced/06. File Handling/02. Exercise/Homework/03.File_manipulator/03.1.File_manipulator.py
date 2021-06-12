@@ -18,6 +18,9 @@ Open the file and replace all the occurrences of the old string with the new str
 "Delete-{file_name}" :
 Delete the file. If the file does not exist, print:
 "An error occurred"
+###################################################
+TO USE THIS VERSION IS ONLY WITH COMMAND LINE INPUT
+###################################################
 """
 import os
 
