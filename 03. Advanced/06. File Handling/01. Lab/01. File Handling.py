@@ -1,4 +1,4 @@
-# file = open('test.txt', 'r')
+# file = open('example.txt', 'r')
 
 # file = open('invalid.txt', 'r')
 
@@ -10,7 +10,7 @@
 #     print("exit")
 
 # try:
-#     text_file = open('test.txt', 'r')
+#     text_file = open('example.txt', 'r')
 #     print("File found")
 # except FileNotFoundError:
 #     print("File not found")
@@ -21,7 +21,7 @@
 # print(file.read(2))     # 'o,'
 # print(file.read())      # ' SoftUni!'
 
-# file = open("test.txt")  # 'Hello, SoftUni!'
+# file = open("example.txt")  # 'Hello, SoftUni!'
 # print(file.readline(5))  # 'Hello'
 # print(file.readline(5))  # ' ,Sof'
 # print(file.readline(5))  # 'tUni!'

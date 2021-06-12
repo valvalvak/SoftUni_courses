@@ -10,11 +10,15 @@ import re
 
 
 def replace_symbol_regex(row):
-    return re.sub(r"[-,.!?]", "@", row)
+    return re.sub(r"[-,.!?]", "@", row)  # works without escaping special characters
 
 
-with open("test.txt", "r") as file:
+with open("example.txt", "r") as file:
     for idx, row in enumerate(file):
         if idx % 2 == 0:
-            replaced_row = replace_symbol_regex(row).split()
-            print(" ".join(replaced_row[::-1]))
+            """variant 1:"""
+            # replaced_row = replace_symbol_regex(row).split()
+            # print(" ".join(replaced_row[::-1]))
+            """variant 2:"""
+            replaced_row = " ".join(reversed(replace_symbol_regex(row).split()))
+            print(replaced_row)

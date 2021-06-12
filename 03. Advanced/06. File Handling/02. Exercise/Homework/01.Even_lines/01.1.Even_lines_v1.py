@@ -9,7 +9,7 @@ Variant: 1
 
 STRING_SET = {"-", ",", ".", "!", "?"}
 
-with open("test.txt", "r") as file:
+with open("example.txt", "r") as file:
     for idx, row in enumerate(file):
         if idx % 2 == 0:
             for el in STRING_SET:
