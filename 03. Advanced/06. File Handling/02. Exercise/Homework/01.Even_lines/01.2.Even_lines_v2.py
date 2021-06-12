@@ -13,7 +13,7 @@ def replace_symbol_regex(row):
     return re.sub(r"[-,.!?]", "@", row)  # works without escaping special characters when in []
 
 
-with open("example.txt", "r") as file:
+with open("01_example.txt", "r") as file:
     for idx, row in enumerate(file):
         if idx % 2 == 0:
             """variant 1:"""
@@ -22,3 +22,5 @@ with open("example.txt", "r") as file:
             """variant 2:"""
             replaced_row = " ".join(reversed(replace_symbol_regex(row).split()))
             print(replaced_row)
+
+file.close()
