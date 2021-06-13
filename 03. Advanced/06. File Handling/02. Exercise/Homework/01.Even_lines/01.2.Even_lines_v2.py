@@ -16,11 +16,5 @@ def replace_symbol_regex(row):
 with open("01_example.txt", "r") as file:
     for idx, row in enumerate(file):
         if idx % 2 == 0:
-            """variant 1:"""
-            # replaced_row = replace_symbol_regex(row).split()
-            # print(" ".join(replaced_row[::-1]))
-            """variant 2:"""
-            replaced_row = " ".join(reversed(replace_symbol_regex(row).split()))
-            print(replaced_row)
-
-file.close()
+            replaced_row = replace_symbol_regex(row).split()
+            print(" ".join(replaced_row[::-1]))

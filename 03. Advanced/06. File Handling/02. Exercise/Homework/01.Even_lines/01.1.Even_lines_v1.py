@@ -7,12 +7,12 @@ Variant: 1
 ==========
 """
 
-STRING_SET = {"-", ",", ".", "!", "?"}
+PUNCTUATION_SET = {"-", ",", ".", "!", "?"}
 
 with open("01_example.txt", "r") as file:
     for idx, row in enumerate(file):
         if idx % 2 == 0:
-            for el in STRING_SET:
+            for el in PUNCTUATION_SET:
                 row = row.replace(el, "@")
             words = reversed(row.split())
             print(" ".join(words))
