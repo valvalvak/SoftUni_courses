@@ -1,68 +1,76 @@
-# from collections import dequeue
-
-# def bomb_effect_dequeue(sequence):
-#     queue_list_as_list = [int(el) for el in sequence.split(", ")]
-#     return dequeue(queue_list_as_list)
-
-# def bomb_casing_dequeue(sequence):
-#     queue_list_as_list = [int(el) for el in sequence.split(", ")[::-1]]
-#     return dequeue(queue_list_as_list)
-
-# def combining_bombs_ques(effects, casing):
-#     pass
-
-# def main():
-#     while True:
-#         i = 0
-
-#     if bomb_effects[i] + queue[i] == DATURA_BOMBS:
-#         datura_count += 1
-#         bomb_effects.popleft()
-#         queue.pop(i)
-#     elif bomb_effects[i] + queue[i] == CHERRY_BOMBS:
-#         cherry_count += 1
-#         bomb_effects.popleft()
-#         queue.pop(i)
-#     elif bomb_effects[i] + queue[i] == SMOKE_DECOY_BOMBS:
-#         smoke_count += 1
-#         bomb_effects.popleft()
-#         queue.pop(i)
-#     else:
-#         queue[i] -= 5
-
-#     if len(queue) < 1 or len(bomb_effects) < 1:
-#         print("You don't have enough materials to fill the bomb pouch.")
-#         break
-#     if 2 < datura_count and 2 < cherry_count and 2 < smoke_count:
-#         print("Bene! You have successfully filled the bomb pouch!")
-#         break
+from collections import deque
 
 
-# bomb_effects_queue  = bomb_effect_dequeue(input())
-# bomb_casing_queue = bomb_casing_dequeue(input())
+def get_bombs_list(sequence):
+    queue_list_as_list = [int(el) for el in sequence.split(", ")]
+    return queue_list_as_list
 
-# DATURA_BOMBS = 40
-# CHERRY_BOMBS = 60
-# SMOKE_DECOY_BOMBS = 120
 
-# cherry_count = 0
-# datura_count = 0
-# smoke_count = 0
+def main(bomb_effects, bomb_casing, smoke_decoy_bombs=120, cherry_bombs=60, datura_bombs=40):
+    smoke_count = 0
+    cherry_count = 0
+    datura_count = 0
 
-# de = list(bomb_effects)
+    while bomb_effects or bomb_casing:
 
-# if bomb_effects:
-#     print(f"Bomb Effects: ", end="")
-#     print(', '.join(map(str, de)))
+        if bomb_effects[0] + bomb_casing[0] == smoke_decoy_bombs:
+            smoke_count += 1
+            bomb_effects.popleft()
+            bomb_casing.popleft()
+        elif bomb_effects[0] + bomb_casing[0] == cherry_bombs:
+            cherry_count += 1
+            bomb_effects.popleft()
+            bomb_casing.popleft()
+        elif bomb_effects[0] + bomb_casing[0] == datura_bombs:
+            datura_count += 1
+            bomb_effects.popleft()
+            bomb_casing.popleft()
+        else:
+            if not bomb_casing[0] - 5 < 0:
+                bomb_casing[0] -= 5
+            else:
+                bomb_casing.popleft()
 
-# else:
-#     print("Bomb Effects: empty")
-# if queue:
-#     print(f"Bomb Casings: ", end="")
-#     print(', '.join(map(str, queue)))
+        if smoke_count >= 3 and cherry_count >= 3 and datura_count >= 3:
+            break
+        elif len(bomb_effects) < 1 or len(bomb_casing) < 1:
+            break
 
-# else:
-#     print("Bomb Casings: empty")
-# print(f"Cherry Bombs: {cherry_count}")
-# print(f"Datura Bombs: {datura_count}")
-# print(f"Smoke Decoy Bombs: {smoke_count}")
+    return {
+        "Bomb effects": bomb_effects,
+        "Bomb casing": bomb_casing,
+        "Cherry count": cherry_count,
+        "Datura count": datura_count,
+        "Smoke decoy count": smoke_count,
+    }
+
+
+def print_solution(result):
+    if result["Datura count"] >= 3 and result["Cherry count"] >= 3 and result["Smoke decoy count"] >= 3:
+        print("Bene! You have successfully filled the bomb pouch!")
+    else:
+        print("You don't have enough materials to fill the bomb pouch.")
+
+    if result["Bomb effects"]:
+        print(f"Bomb Effects: ", end="")
+        print(', '.join(map(str, result["Bomb effects"])))
+
+    else:
+        print("Bomb Effects: empty")
+
+    if result["Bomb casing"]:
+        print(f"Bomb Casings: ", end="")
+        print(', '.join(map(str, result["Bomb casing"])))
+
+    else:
+        print("Bomb Casings: empty")
+
+    print(f"Cherry Bombs: {result['Cherry count']}")
+    print(f"Datura Bombs: {result['Datura count']}")
+    print(f"Smoke Decoy Bombs: {result['Smoke decoy count']}")
+
+
+bomb_effects_queue = deque(get_bombs_list(input()))
+bomb_casing_queue = deque([x for x in get_bombs_list(input())][::-1])
+result = main(bomb_effects_queue, bomb_casing_queue)
+print_solution(result)
