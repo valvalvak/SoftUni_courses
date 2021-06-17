@@ -26,7 +26,7 @@
 # print(file.readline(5))  # ' ,Sof'
 # print(file.readline(5))  # 'tUni!'
 # print(file.readline())   # '' Goes to the new line
-# print(file.readline(5))  # 'Secon' Print second line
+# print(file.readline(5))  # 'Second' Print second line
 
 # file = open("text.txt")
 # print(file.readlines())  # ['Every\n', 'Word\n', 'is\n', 'line']
