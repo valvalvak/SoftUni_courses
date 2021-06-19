@@ -1,11 +1,6 @@
 from collections import deque
 
 
-def get_bombs_list(sequence):
-    queue_list_as_list = [int(el) for el in sequence.split(", ")]
-    return queue_list_as_list
-
-
 def main(bomb_effects, bomb_casing, smoke_decoy_bombs=120, cherry_bombs=60, datura_bombs=40):
     smoke_count = 0
     cherry_count = 0
@@ -70,7 +65,7 @@ def print_solution(result):
     print(f"Smoke Decoy Bombs: {result['Smoke decoy count']}")
 
 
-bomb_effects_queue = deque(get_bombs_list(input()))
-bomb_casing_queue = deque([x for x in get_bombs_list(input())][::-1])
+bomb_effects_queue = deque([int(el) for el in input().split(", ")])
+bomb_casing_queue = deque([int(x) for x in input().split(", ")][::-1])
 result = main(bomb_effects_queue, bomb_casing_queue)
 print_solution(result)
