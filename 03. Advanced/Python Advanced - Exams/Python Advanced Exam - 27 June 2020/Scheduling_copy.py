@@ -1,27 +1,20 @@
-from collections import deque
-
-
-def get_list_of_jobs_cycles():
-    jobs_list = [int(x) for x in input().split(", ")]
-    return jobs_list
+def get_list_of_jobs_cycles(_input_):
+    task_list = [int(x) for x in _input_.split(", ")]
+    return task_list
 
 
 def get_count_of_all_tasks_to_target(tasks, target):
-    clock_cycle = 0
-    priority_task = min(tasks)
-    current_task = tasks[0]
+    sorted_tasks = sorted([(val, idx) for (idx, val) in enumerate(tasks)])
 
-    while tasks:
-        if current_task == priority_task == target:
-            return clock_cycle
-        else:
-            clock_cycle += 1
-            if not current_task == priority_task:
-                tasks.rotate(-1)
-            else:
-                tasks.popleft()
+    cycles = 0
+
+    for (task, idx) in sorted_tasks:
+        cycles += task
+        if idx == target:
+            break
+    return cycles
 
 
-task_que = deque(get_list_of_jobs_cycles())
+task_que = get_list_of_jobs_cycles(input())
 target_task = int(input())
-print(get_count_of_all_tasks_to_target(task_que, task_que[target_task]))
+print(get_count_of_all_tasks_to_target(task_que, target_task))

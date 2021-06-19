@@ -14,7 +14,7 @@ def best_list_pureness(values, k):
     best_rotation = 0
     best_pureness = calc_pureneses(values)
 
-    for rotations in range(k):
+    for rotations in range(k + 1):
         current_pureness = calc_pureneses(values)
         if best_pureness < current_pureness:
             best_rotation = rotations
