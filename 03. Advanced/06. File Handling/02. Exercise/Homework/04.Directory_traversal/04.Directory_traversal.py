@@ -21,6 +21,5 @@ with open(path_to_desktop, "w+") as report_file:
 # with open("report.txt", 'r') as file:
 #     for line in file:
 #         print(line, end="")
-
-# import shutil, os
+#
 # shutil.copy("report.txt", path_to_desktop)
