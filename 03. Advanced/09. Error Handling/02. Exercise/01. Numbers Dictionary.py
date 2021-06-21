@@ -1,22 +1,22 @@
 numbers_dictionary = {}
 
 line = input()
-try:
-    while line != "Search":
-        number_as_string = line
-        number = int(input())
-        numbers_dictionary[number_as_string] = number
 
-    line = input()
+while line != "Search":
+    number_as_string = line
+    number = int(input())
+    numbers_dictionary[number_as_string] = number
 
-    while line != "Remove":
-        searched = line
-        print(numbers_dictionary[searched])
+line = input()
 
-    line = input()
+while line != "Remove":
+    searched = line
+    print(numbers_dictionary[searched])
 
-    while line != "End":
-        searched = line
-        del numbers_dictionary[searched]
+line = input()
 
-    print(numbers_dictionary)
+while line != "End":
+    searched = line
+    del numbers_dictionary[searched]
+
+print(numbers_dictionary)
