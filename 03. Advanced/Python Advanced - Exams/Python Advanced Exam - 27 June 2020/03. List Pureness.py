@@ -4,7 +4,7 @@ from collections import deque
 def best_list_pureness(values, k):
     values = deque(values)
 
-    def calc_pureneses(values):
+    def calc_pureness(values):
         pureness = 0
         for (idx, val) in enumerate(values):
             pureness += idx * val
@@ -12,10 +12,10 @@ def best_list_pureness(values, k):
 
     k = min(k, len(values))
     best_rotation = 0
-    best_pureness = calc_pureneses(values)
+    best_pureness = calc_pureness(values)
 
     for rotations in range(k + 1):
-        current_pureness = calc_pureneses(values)
+        current_pureness = calc_pureness(values)
         if best_pureness < current_pureness:
             best_rotation = rotations
             best_pureness = current_pureness
