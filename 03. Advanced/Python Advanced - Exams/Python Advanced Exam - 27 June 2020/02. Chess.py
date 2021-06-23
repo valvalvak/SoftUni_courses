@@ -1,6 +1,8 @@
 KING_SYMBOL = "K"
 QUEEN_SYMBOL = "Q"
 BOARD_SIZE = 8
+DELTAS = [(-1, -1), (-1, 0), (-1, +1), (0, -1),
+          (0, +1), (+1, -1), (+1, 0), (+1, +1), ]
 
 
 def read_input(board_size):
@@ -24,7 +26,7 @@ def in_range(value, max_value):
 def search_with_deltas(board, king, deltas):
     rows_count = len(board)
     cols_count = len(board[0])
-    (delta_row, delsta_col) = deltas
+    (delta_row, delta_col) = deltas
     (row_idx, col_idx) = king
 
     while True:
@@ -36,15 +38,13 @@ def search_with_deltas(board, king, deltas):
             return (row_idx, col_idx)
 
         row_idx += delta_row
-        col_idx += delsta_col
+        col_idx += delta_col
 
 
 def get_queens_beating_kings(board, king):
-    deltas = [(-1, -1), (-1, 0), (-1, +1), (0, -1),
-              (0, +1), (+1, -1), (+1, 0), (+1, +1), ]
-    queens_locaton_list = [search_with_deltas(
-        board, king, delta) for delta in deltas]
-    return [queen_location for queen_location in queens_locaton_list if queen_location]
+    queens_location_list = [search_with_deltas(
+        board, king, delta) for delta in DELTAS]
+    return [queen_location for queen_location in queens_location_list if queen_location]
 
 
 def print_result(queens):
