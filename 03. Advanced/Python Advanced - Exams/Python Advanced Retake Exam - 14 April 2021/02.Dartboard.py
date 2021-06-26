@@ -29,7 +29,6 @@ def are_valid_indices(board, row_idx, col_idx):
 
 def recieve_throw_coordinates():
     indices = [int(x) for x in input()[1:-1].split(", ")]
-    # indices = [int(x) for x in input() if x.isdigit()]
     return tuple(indices)
 
 
@@ -38,7 +37,11 @@ def print_winner(winner, throws):
 
 
 def calculate_d_or_t_points(board, row_idx, col_idx):
-    calculation = int(board[row_idx][0]) + int(board[row_idx][-1]) + int(board[0][col_idx]) + int(board[-1][col_idx])
+    first_current_row = int(board[row_idx][0])
+    last_current_row = int(board[row_idx][-1])
+    top_current_column = int(board[0][col_idx])
+    bottom_current_column = int(board[-1][col_idx])
+    calculation = first_current_row + last_current_row + top_current_column + bottom_current_column
 
     if board[row_idx][col_idx] == "D":
         return calculation * 2
