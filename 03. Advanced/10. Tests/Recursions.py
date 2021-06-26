@@ -20,4 +20,8 @@ def max_numbers_rec(numbers):
 
 print(max_numbers([1, 2, 3, 4, 5]))
 
+# print(max_numbers([5, 4, 3, 2, 1]))
+
 print(max_numbers_rec([1, 2, 3, 4, 5]))
+
+# print(max_numbers_rec([5, 4, 3, 2, 1]))
