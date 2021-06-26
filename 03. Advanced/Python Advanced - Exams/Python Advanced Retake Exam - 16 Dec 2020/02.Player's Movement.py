@@ -1,3 +1,5 @@
+from collections import deque
+
 PLAYER = "P"
 EMPTY = "-"
 DIRECTION = {
@@ -64,7 +66,7 @@ def print_solution(string_result, field_result):
         print("".join(row))
 
 
-starting_case_string = [x for x in input()]
+starting_case_string = deque(x for x in input())
 size_of_field = int(input())
 starting_field = build_field(size_of_field)
 commands_count = int(input())
