@@ -15,7 +15,7 @@ def build_field(n):
     return field_matrix
 
 
-def get_player_positoon(field):
+def get_player_position(field):
     for row_idx in range(len(field)):
         if PLAYER in field[row_idx]:
             col_idx = field[row_idx].index(PLAYER)
@@ -47,10 +47,9 @@ def field_update(string_stack, field, old_data, new_data):
 
 def main(string_stack, field, m):
     """On the next line you receive a number M"""
-    player_last_position = None
     for _ in range(m):
         command = input()
-        player_position = get_player_positoon(field)
+        player_position = get_player_position(field)
         new_direction = get_new_player_cell(player_position, DIRECTION[command])
         if is_in_field_range(new_direction, field):
             string_stack, field = field_update(string_stack, field, player_position, new_direction)
