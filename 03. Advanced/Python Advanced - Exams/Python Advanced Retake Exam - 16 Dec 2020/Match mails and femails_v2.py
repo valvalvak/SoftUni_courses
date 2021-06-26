@@ -2,52 +2,71 @@ from collections import deque
 
 
 def get_males_and_females_ques():
-    queue = deque(int(el) for el in input().split())
-    return queue
+    """First you will be given a sequence of integers representing males.
+    Afterwards you will be given another sequence of integers representing females."""
+    stacks = [int(value) for value in input().split(" ")]
+    return deque(stacks)
 
 
-males = get_males_and_females_ques()
-females = get_males_and_females_ques()
+def special_case(female_value, male_value, females_que, males_que):
+    if female_value % 25 == 0:
+        if females_que:
+            females_que.popleft()
+        males_que.append(male_value)
+    if male_value % 25 == 0:
+        if males_que:
+            males_que.pop()
+        females_que.appendleft(female_value)
+    return female_value, male_value, females_que, males_que
 
-queue = []
-matches = 0
 
-for el in range(len(males)):
-    queue.append(males.pop())
+def main(females_candidates_que, males_candidates_que, matches_count):
+    """You have to start from the first female and try to match it with the last male."""
+    while True:
+        if len(males_candidates_que) < 1 or len(females_candidates_que) < 1:
+            return females_candidates_que, males_candidates_que, matches_count
 
-while queue and females:
-    i = 0
-    if queue[i] <= 0:
-        queue.pop(i)
-        continue
-    elif females[i] <= 0:
-        females.popleft()
-        continue
-    if queue[i] % 25 == 0:
-        queue.pop(i)
-        if queue:
-            queue.pop(i + 1)
-    elif females[i] % 25 == 0:
-        females.popleft()
-        if females:
-            females.popleft()
+        female_value = females_candidates_que.popleft()
+        male_value = males_candidates_que.pop()
 
-    if queue[i] == females[i]:
-        matches += 1
-        queue.pop(i)
-        females.popleft()
+        if (female_value <= 0) and (0 < male_value):
+            males_candidates_que.append(male_value)
+            continue
+
+        elif (male_value <= 0) and (0 < female_value):
+            females_candidates_que.appendleft(female_value)
+            continue
+
+        elif female_value % 25 == 0 or male_value % 25 == 0:
+            _, _, females_candidates_que, males_candidates_que = special_case(
+                female_value, male_value, females_candidates_que, males_candidates_que
+            )
+            continue
+
+        elif not male_value == female_value:
+            male_value -= 2
+            males_candidates_que.append(male_value)
+
+        else:
+            matches_count += 1
+
+
+def print_matches(females_que, males_que, matches_results):
+    print(f'Matches: {matches_results}')
+    if males_que:
+        print(f"Males left: {', '.join(map(str, reversed(males_que)))}")
     else:
-        females.popleft()
-        queue[i] -= 2
+        print('Males left: none')
+    if females_que:
+        print(f"Females left: {', '.join(map(str, females_que))}")
+    else:
+        print('Females left: none')
 
-print(f'Matches: {matches}')
-if queue:
-    queue = list(queue)
-    print(f"Males left: {', '.join(map(str, queue))}")
-else:
-    print('Males left: none')
-if females:
-    females = list(females)
-    print(f"Females left: {', '.join(map(str, females))}")
-else:
-    print('Females left: none')
+
+males_candidates = get_males_and_females_ques()
+females_candidates = get_males_and_females_ques()
+MATCHES = 0
+femles_left, males_left, matches = main(females_candidates, males_candidates, MATCHES)
+
+if __name__ == '__main__':
+    print_matches(femles_left, males_left, matches)
