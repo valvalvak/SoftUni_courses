@@ -31,10 +31,6 @@ def get_player_position(field):
     return player_indices, target_count
 
 
-def is_in_range(field, next_row, next_col):
-    return 0 <= next_row < len(field) and 0 <= next_col < len(field)
-
-
 def get_to_move_cell(player, direction, steps):
     aim_row_idx, aim_col_idx = MOVE_DIRECTION[direction]
     new_row_idx = player[0] + aim_row_idx * steps
@@ -50,12 +46,7 @@ def get_update_move_field(field, next_row_idx, next_col_idx, player_position):
     return field, next_row_idx, next_col_idx
 
 
-def target_shot(field, row, col):
-    TARGET_SHOTS_INDICES.append([row, col])
-    field[row][col] = EMPTY
-
-
-def found_a_target(field, player_pos, direction):
+def is_target(field, player_pos, direction):
     dir_row, dir_col = MOVE_DIRECTION[direction]
     aim_row, aim_col = dir_row + player_pos[0], dir_col + player_pos[1]
 
@@ -68,7 +59,16 @@ def found_a_target(field, player_pos, direction):
         aim_row, aim_col = aim_row + dir_row, aim_col + dir_col
 
 
-def are_targes_shot(all_targes, targets_shot):
+def target_shot(field, row, col):
+    TARGET_SHOTS_INDICES.append([row, col])
+    field[row][col] = EMPTY
+
+
+def is_in_range(field, next_row, next_col):
+    return 0 <= next_row < len(field) and 0 <= next_col < len(field)
+
+
+def are_targets_shot(all_targes, targets_shot):
     return all_targes <= targets_shot
 
 
@@ -84,7 +84,7 @@ def main(field, lines_count, all_targets=0, targets_shot=0):
 
         if command.startswith("shoot"):
             _, direction = command.split(" ")
-            if found_a_target(field, player_position, direction):
+            if is_target(field, player_position, direction):
                 targets_shot += 1
 
         elif command.startswith("move"):
@@ -95,7 +95,7 @@ def main(field, lines_count, all_targets=0, targets_shot=0):
                 field, row, col = get_update_move_field(field, next_row_idx, next_col_idx, player_position)
                 mem_player_pos.append([row, col])
 
-        if are_targes_shot(all_targets, targets_shot):
+        if are_targets_shot(all_targets, targets_shot):
             return all_targets, targets_shot
 
     return all_targets, targets_shot
