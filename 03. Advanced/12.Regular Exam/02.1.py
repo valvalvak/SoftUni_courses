@@ -35,14 +35,6 @@ def is_in_range(field, next_row, next_col):
     return 0 <= next_row < len(field) and 0 <= next_col < len(field)
 
 
-def get_aim_cell(player, direction):
-    aim_row_idx, aim_col_idx = MOVE_DIRECTION[direction]
-    new_row_idx = player[0] + aim_row_idx
-    new_col_idx = player[1] + aim_row_idx
-    next_player_indices = (new_row_idx, new_col_idx)
-    return next_player_indices
-
-
 def get_to_move_cell(player, direction, steps):
     aim_row_idx, aim_col_idx = MOVE_DIRECTION[direction]
     new_row_idx = player[0] + aim_row_idx * steps
