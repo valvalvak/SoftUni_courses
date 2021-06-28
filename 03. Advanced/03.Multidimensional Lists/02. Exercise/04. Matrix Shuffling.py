@@ -22,15 +22,9 @@ def is_command_valid(command, valid_command, valid_length):
 def are_indices_valid(matrix, command):
     swap, row1, col1, row2, col2 = command.split(' ')
     row1, col1, row2, col2 = int(row1), int(col1), int(row2), int(col2)
-    try:
-        if not matrix[row1][col1]:
-            return False
-        elif not matrix[row2][col2]:
-            return False
-    except:
+    if not any([matrix[row1][col1], matrix[row2][col2]]):
         return False
-    else:
-        return True
+    return True
 
 
 def matrix_swapping(matrix, command):
