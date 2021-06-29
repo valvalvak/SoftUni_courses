@@ -49,6 +49,7 @@ def get_move_commands(terrarium):
         new_cell_indices = get_new_indices(snake_position, move_indices)
         if not in_range(terrarium, new_cell_indices):
             pass
+        
 
 
 square_size = int(input())
