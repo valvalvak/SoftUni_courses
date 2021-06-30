@@ -15,12 +15,14 @@ def draw_rhomboid(n):
         draw_line(i + 1, "*", n - i - 1)
 
 
-def draw_triangle(n):
-    for i in range(n):
-        draw_line(i + 1, "*")
-    for i in range(n - 2, -1, -1):
-        draw_line(i + 1, "*")
-
-
-draw_rhomboid(4)
-draw_triangle(4)
+draw_rhomboid(int(input()))
+#
+#
+# def draw_triangle(n):
+#     for i in range(n):
+#         draw_line(i + 1, "*")
+#     for i in range(n - 2, -1, -1):
+#         draw_line(i + 1, "*")
+#
+#
+# draw_triangle(4)
