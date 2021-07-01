@@ -1,7 +1,8 @@
 class Flower:
-    def __init__(self, name, water_requirements):
+    def __init__(self, name, water_requirements, is_happy=False):
         self.name = str(name)
         self.water_requirements = int(water_requirements)
+        self.is_happy = is_happy
 
     def water(self, quantity):
         """
@@ -9,14 +10,18 @@ class Flower:
         Each time check if the quantity is greater than or equal to the required.
         If it is - the flower becomes happy (set is_happy to True).
         """
-        pass
+        if quantity >= self.water_requirements:
+            self.is_happy = True
 
     def status(self):
         """
         -status() - it should return "{name} is happy" if the flower is happy,
         otherwise it should return "{name} is not happy".
         """
-        pass
+        if self.is_happy is True:
+            return f"{self.name} is happy"
+        else:
+            return f"{self.name} is not happy"
 
 
 flower = Flower("Lilly", 100)
