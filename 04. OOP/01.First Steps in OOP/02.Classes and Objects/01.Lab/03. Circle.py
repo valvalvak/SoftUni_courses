@@ -4,8 +4,8 @@ class Circle:
     def __init__(self, radius: int):
         self.radius = radius
 
-    def set_radius(self, param):
-        self.radius = param
+    def set_radius(self, new_r):
+        self.radius = new_r
 
     def get_area(self):
         return Circle.pi * self.radius ** 2
