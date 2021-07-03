@@ -1,24 +1,54 @@
+from typing import List
 from pokemon import Pokemon
 
 
 class Trainer:
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.name = name
-        self.pokemons = []
+        self.pokemons: List = []
 
-    def add_pokemon(self, pokemon: Pokemon):
-        if pokemon.name not in self.pokemons:
-            self.pokemons.append(pokemon.name)
-            return f"Caught {pokemon.name} with health {pokemon.health}"
-        else:
+    def add_pokemon(self, pokemon):
+        if pokemon in self.pokemons:
             return "This pokemon is already caught"
+        else:
+            self.pokemons.append(pokemon)
+            return f"Caught {Pokemon.pokemon_details(pokemon)}"
 
     def release_pokemon(self, pokemon_name):
-        if pokemon_name not in self.pokemons:
-            return "Pokemon is not caught"
-        else:
-            self.pokemons.remove(pokemon_name)
-            return "You have released {pokemon_name}"
+        for pokemon in self.pokemons:
+            if pokemon.name == pokemon_name:
+                self.pokemons.remove(pokemon)
+                return f"You have released {pokemon_name}"
+            else:
+                return "Pokemon is not caught"
 
     def trainer_data(self):
-        pass
+        nl = "\n"
+        # return \
+        #     f"Pokemon Trainer {self.name}{nl}"\
+        #     f"Pokemon count {len(self.pokemons)}{nl}"\
+        #     f"- {nl.join([pokemon.pokemon_details() for pokemon in self.pokemons])}"
+        print_solution = ''
+        print_solution += f'Pokemon Trainer {self.name}{nl}'
+        print_solution += f'Pokemon count {len(self.pokemons)}'
+        for pokemon in self.pokemons:
+            print_solution += f'- {nl}{pokemon.pokemon_details()}'
+        return print_solution
+
+
+# pokemon = Pokemon("Pikachu", 90)
+# print(pokemon.pokemon_details())
+# trainer = Trainer("Ash")
+# print(trainer.add_pokemon(pokemon))
+# second_pokemon = Pokemon("Charizard", 110)
+# second3_pokemon = Pokemon("Charizard3", 330)
+# second4_pokemon = Pokemon("Charizard4", 440)
+# second5_pokemon = Pokemon("Charizard5", 555)
+# print(trainer.add_pokemon(second_pokemon))
+# print(trainer.add_pokemon(second_pokemon))
+# print(trainer.add_pokemon(second3_pokemon))
+# print(trainer.add_pokemon(second4_pokemon))
+# print(trainer.add_pokemon(second5_pokemon))
+# print(trainer.release_pokemon("Pikachu"))
+# print(trainer.release_pokemon("Pikachu"))
+# print(trainer.trainer_data())
