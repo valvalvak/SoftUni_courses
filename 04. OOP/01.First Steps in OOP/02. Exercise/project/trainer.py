@@ -1,6 +1,6 @@
 from typing import List
 
-from project.pokemon import Pokemon
+from pokemon import Pokemon
 
 
 class Trainer:
@@ -13,7 +13,7 @@ class Trainer:
             return "This pokemon is already caught"
         else:
             self.pokemons.append(pokemon)
-            return f"Caught {pokemon.pokemon_details(pokemon)}"
+            return f"Caught {Pokemon.pokemon_details(pokemon)}"
 
     def release_pokemon(self, pokemon_name):
         for pokemon in self.pokemons:
@@ -33,7 +33,7 @@ class Trainer:
         print_solution += f'Pokemon Trainer {self.name}{nl}'
         print_solution += f'Pokemon count {len(self.pokemons)}{nl}'
         for pokemon in self.pokemons:
-            print_solution += f'- {pokemon.pokemon_details()}{nl}'
+            print_solution += f'- {pokemon.pokemon_details()}'
         return print_solution
 
 
