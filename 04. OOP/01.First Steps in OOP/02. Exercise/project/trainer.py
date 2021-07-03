@@ -1,5 +1,5 @@
 from typing import List
-from pokemon import Pokemon
+from project.pokemon import Pokemon
 
 
 class Trainer:
@@ -12,7 +12,7 @@ class Trainer:
             return "This pokemon is already caught"
         else:
             self.pokemons.append(pokemon)
-            return f"Caught {Pokemon.pokemon_details(pokemon)}"
+            return f"Caught {Pokemon.pokemon_details()}"
 
     def release_pokemon(self, pokemon_name):
         for pokemon in self.pokemons:
@@ -30,9 +30,9 @@ class Trainer:
         #     f"- {nl.join([pokemon.pokemon_details() for pokemon in self.pokemons])}"
         print_solution = ''
         print_solution += f'Pokemon Trainer {self.name}{nl}'
-        print_solution += f'Pokemon count {len(self.pokemons)}'
+        print_solution += f'Pokemon count {len(self.pokemons)}{nl}'
         for pokemon in self.pokemons:
-            print_solution += f'- {nl}{pokemon.pokemon_details()}'
+            print_solution += f'- {pokemon.pokemon_details()}{nl}'
         return print_solution
 
 
