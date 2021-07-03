@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\a100_vvakrilov\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+  "python.pythonPath": "/bin/python3",
   "cSpell.ignoreWords": [
     "deque"
   ]
