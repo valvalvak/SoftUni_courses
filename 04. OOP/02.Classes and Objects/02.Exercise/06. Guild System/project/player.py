@@ -6,6 +6,7 @@ class Player:
         self.mp = mp
         self.skills = {}
         self.guild = "Unaffiliated"
+        self.players = []
 
     def add_skill(self, skill_name, mana_cost):
         if skill_name in self.skills:
