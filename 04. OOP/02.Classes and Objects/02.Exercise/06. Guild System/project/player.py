@@ -1,14 +1,11 @@
 class Player:
-    players_list = []
-    player_guild = "Unaffiliated"
 
     def __init__(self, name: str, hp: int, mp: int):
         self.name = name
         self.hp = hp
         self.mp = mp
         self.skills = {}
-        self.players = Player.players_list
-        self.guild = Player.player_guild
+        self.guild = "Unaffiliated"
 
     def add_skill(self, skill_name, mana_cost):
         if skill_name in self.skills:
@@ -18,9 +15,7 @@ class Player:
 
     def player_info(self):
         result = f"Name: {self.name}\nGuild: {self.guild}\nHP: {self.hp}\nMP: {self.mp}\n"
-        result += "\n".join([f"==={key} - {val}" for key, val in self.skills.items()])
-        # for key, val in self.skills.items():
-        #     result += f"==={key} - {val}\n"
+        result += "\n".join([f"==={key} - {val}\n" for key, val in self.skills.items()])
         return result
 
 
