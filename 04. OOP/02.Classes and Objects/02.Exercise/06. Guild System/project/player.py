@@ -1,26 +1,26 @@
 class Player:
+    players_list = []
+    player_guild = "Unaffiliated"
+
     def __init__(self, name: str, hp: int, mp: int):
         self.name = name
         self.hp = hp
         self.mp = mp
         self.skills = {}
-        self.guild = "Unaffiliated"
-        self.players = []
+        self.players = Player.players_list
+        self.guild = Player.player_guild
 
     def add_skill(self, skill_name, mana_cost):
         if skill_name in self.skills:
             return "Skill already added"
         self.skills[skill_name] = mana_cost
-        return "Skill {skill_name} added to the collection of the player {player_name}"
+        return f"Skill {skill_name} added to the collection of the player {self.name}"
 
-    @staticmethod
-    def player_info():
-        return repr(Player)
+    def player_info(self):
+        result = f"Name: {self.name}\nGuild: {self.guild}\nHP: {self.hp}\nMP: {self.mp}\n"
+        result += "\n".join([f"==={key} - {val}" for key, val in self.skills.items()])
+        # for key, val in self.skills.items():
+        #     result += f"==={key} - {val}\n"
+        return result
 
-    def __repr__(self):
-        print(f"{self.name}")
-        print(f"{self.guild}")
-        print(f"HP:{self.hp}")
-        print(f"HP:{self.mp}")
-        for key, val in self.skills.items():
-            print(f"==={key} - {val}")
+
