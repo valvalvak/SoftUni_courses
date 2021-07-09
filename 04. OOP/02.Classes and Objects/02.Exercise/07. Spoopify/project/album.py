@@ -4,32 +4,32 @@ from project.song import Song
 
 
 class Album:
-    SINGLE = 1
-    IS_ALBUM_PUBLISHED = False
+    published = False
 
-    def __init__(self, name: str, songs):
+    def __init__(self, name: str):
         self.name = name
         self.songs: List = []
-        self.published = Album.IS_ALBUM_PUBLISHED
 
     def add_song(self, song: Song):
-        if song.name is None or all([len(s) for s in song.name]) < 1:
+
+        if song is None:
             return self.songs
 
-        elif len(song.name) == Album.SINGLE:
+        elif song.single:
             return f"Cannot add {song.name}. It's a single"
 
         elif self.published is True:
             return f"Cannot add songs. Album is published."
 
-        if song.name not in self.songs:
+        elif song in self.songs:
+            return f"Song is already in the album."
+
+        else:
             self.songs.append(song)
             return f"Song {song.name} has been added to the album {self.name}."
 
-        else:
-            return f"Song is already in the album."
-
     def remove_song(self, song_name: str):
+
         if self.published is True:
             return f"Cannot remove songs. Album is published."
 
@@ -41,12 +41,15 @@ class Album:
             return f"Song is not in the album."
 
     def publish(self):
+
         if self.published is True:
             return f"Album {self.name} is already published."
-        Album.IS_ALBUM_PUBLISHED = True
+
+        self.published = True
         return f"Album {self.name} has been published."
 
     def details(self):
         result = f"Album {self.name}\n"
-        result += "\n".join([f"== {Song.get_info(s)}\n" for s in self.songs])
+        result += "".join([f"== {Song.get_info(s)}\n" for s in self.songs])
+
         return result
