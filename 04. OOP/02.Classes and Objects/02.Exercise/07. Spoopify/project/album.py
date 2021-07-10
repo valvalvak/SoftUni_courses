@@ -42,10 +42,10 @@ class Album:
 
     def publish(self):
 
-        if self.published is True:
+        if Album.published is True:
             return f"Album {self.name} is already published."
 
-        self.published = True
+        Album.published = True
         return f"Album {self.name} has been published."
 
     def details(self):
