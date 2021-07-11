@@ -1,0 +1,26 @@
+Player name: Pall
+Points sprint: 1
+Points dribble: 3
+Points passing: 5
+Points shooting: 7
+
+calling the __str__ method
+Player: Pall
+Sprint: 1
+Dribble: 3
+Passing: 5
+Shooting: 7
+
+About the team
+Team name: Best
+Teams points: 10
+Teams players: 0
+Player Pall joined team Best
+Player Pall has already joined
+Teams players: 1
+Player: Pall
+Sprint: 1
+Dribble: 3
+Passing: 5
+Shooting: 7
+Player Pall not found
