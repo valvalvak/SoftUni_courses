@@ -11,7 +11,13 @@ class Zoo:
         self.workers: List = []
 
     def add_animal(self, animal, price):
-        pass
+        if self.__budget < animal.money_for_care + price:
+            return "Not enough budget"
+        elif len(self.animals) + 1 > self.__animal_capacity:
+            return "Not enough space for animal"
+        self.animals.append(animal)
+        self.__budget -= animal.money_for_care + price
+        return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
 
     def hire_worker(self, worker):
         pass
