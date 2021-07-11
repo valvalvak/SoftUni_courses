@@ -45,7 +45,7 @@ class Zoo:
         """
         pass
 
-    def worker_status(self):
+    def workers_status(self):
         """
         :return:
         You have {total_workers_count} workers
