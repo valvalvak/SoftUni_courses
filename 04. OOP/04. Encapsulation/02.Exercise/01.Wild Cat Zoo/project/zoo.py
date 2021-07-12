@@ -1,5 +1,7 @@
 from typing import List
 
+from project.animal import Animal
+
 
 class Zoo:
     def __init__(self, name: str, budget: int, animal_capacity: int, worker_capacity: int):
@@ -64,7 +66,12 @@ class Zoo:
         ...
         Hint: use the __repr__ methods of the animals to print them on the console
         """
-        pass
+        animals_print_order = ["Lions", "Tigers", "Cheetahs", ]
+        print_output = f"You have {len(self.animals)} animals\n"
+        for c in animals_print_order:
+            print_output += f"--- {self.animals.count(__class__.__name__[c])}\n"
+        print_output += "\n".join([f"{animal.__repr__()}" for animal in self.animals])
+        return f"{print_output}"
 
     def workers_status(self):
         """
