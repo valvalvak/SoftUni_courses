@@ -66,10 +66,10 @@ class Zoo:
         ...
         Hint: use the __repr__ methods of the animals to print them on the console
         """
-        animals_print_order = ["Lions", "Tigers", "Cheetahs", ]
+        animals_print_order = ["Lion", "Tiger", "Cheetah", ]
         print_output = f"You have {len(self.animals)} animals\n"
-        for c in animals_print_order:
-            print_output += f"--- {self.animals.count(__class__.__name__[c])}\n"
+        for class_name in animals_print_order:
+            print_output += f"--- {class_name.__name__} {class_name}\n"
         print_output += "\n".join([f"{animal.__repr__()}" for animal in self.animals])
         return f"{print_output}"
 
