@@ -20,7 +20,7 @@ class Zoo:
         return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
 
     def hire_worker(self, worker):
-        if len(self.workers) + 1 > self.__worker_capacity:
+        if self.__worker_capacity < len(self.workers) + 1:
             return "Not enough space for worker"
         self.workers.append(worker)
         return f"{worker.name} the {worker.__class__.__name__} hired successfully"
@@ -34,14 +34,14 @@ class Zoo:
 
     def pay_workers(self):
         workers_salaries_sum = sum([worker.salary for worker in self.workers])
-        if workers_salaries_sum <= self.__budget:
+        if self.__budget >= workers_salaries_sum:
             self.__budget -= workers_salaries_sum
             return f"You payed your workers. They are happy. Budget left: {self.__budget}"
         return "You have no budget to pay your workers. They are unhappy"
 
     def tend_animals(self):
         sum_to_tend_all_animals = sum([animal.money_for_care for animal in self.animals])
-        if self.__budget <= sum_to_tend_all_animals:
+        if self.__budget >= sum_to_tend_all_animals:
             self.__budget -= sum_to_tend_all_animals
             return f"You tended all the animals. They are happy. Budget left: {self.__budget}"
         return "You have no budget to tend the animals. They are unhappy."
