@@ -20,7 +20,10 @@ class Zoo:
         return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
 
     def hire_worker(self, worker):
-        pass
+        if len(self.workers) + 1 > self.__worker_capacity:
+            return "Not enough space for worker"
+        self.workers.append(worker)
+        return f"{worker.name} the {worker.__class__.__name__} hired successfully"
 
     def fire_worker(self, worker_name):
         pass
