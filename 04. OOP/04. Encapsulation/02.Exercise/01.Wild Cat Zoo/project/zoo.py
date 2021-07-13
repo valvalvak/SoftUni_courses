@@ -1,7 +1,5 @@
 from typing import List
 
-from project.animal import Animal
-
 
 class Zoo:
     def __init__(self, name: str, budget: int, animal_capacity: int, worker_capacity: int):
@@ -52,40 +50,42 @@ class Zoo:
         self.__budget += amount
 
     def animals_status(self):
-        """
-        :return:
-        You have {total_animals_count} animals
-        ----- {amount_of_lions} Lions:
-        {lion1}
-        ...
-        ----- {amount_of_tigers} Tigers:
-        {tiger1}
-        ...
-        ----- {amount_of_cheetahs} Cheetahs:
-        {cheetah1}
-        ...
-        Hint: use the __repr__ methods of the animals to print them on the console
-        """
-        animals_print_order = ["Lion", "Tiger", "Cheetah", ]
+        animals_print_order = ("Lion", "Tiger", "Cheetah",)
         print_output = f"You have {len(self.animals)} animals\n"
         for class_name in animals_print_order:
-            print_output += f"--- {class_name.__name__} {class_name}\n"
-        print_output += "\n".join([f"{animal.__repr__()}" for animal in self.animals])
-        return f"{print_output}"
+            animals_count = sum(map(lambda x: type(x).__name__ == class_name, self.animals))
+            print_output += f"----- {animals_count} {class_name}" + "\n"
+            print_output += "\n".join([
+                f"{repr(animal)}"
+                for animal in self.animals
+                if type(animal).__name__ == class_name]) + "\n"
+        return print_output.rstrip("\n")
 
     def workers_status(self):
-        """
-        :return:
-        You have {total_workers_count} workers
-        ----- {amount_of_keepers} Keepers:
-        {keeper1}
-        ...
-        ----- {amount_of_caretakers} Caretakers:
-        {caretaker1}
-        ...
-        ----- {amount_of_vetes} Vets:
-        {vet1}
-        ...
-        Hint: use the __repr__ methods of the workers to print them on the console
-        """
-        pass
+        workers_print_order = ["Keeper", "Karetaker", "Vet", ]
+        print_output = f"You have {len(self.workers)} workers\n"
+        for class_name in workers_print_order:
+            workers_count = sum(map(lambda x: type(x).__name__ == class_name, self.workers))
+            print_output += f"----- {workers_count} {class_name}"
+            print_output += "\n".join([
+                f"{repr(worker)}"
+                for worker in self.workers
+                if type(worker).__name__ == class_name]) + "\n"
+        return print_output.rstrip("\n")
+
+# def animals_status(self):
+#         result = [f"You have {len(self.animals)} animals"]
+#
+#         lions = [a.__repr__() for a in self.animals if a.__class__.__name__ == "Lion"]
+#         result.extend([f"----- {len(lions)} Lions:"])
+#         result.extend(lions)
+#
+#         tigers = [a.__repr__() for a in self.animals if a.__class__.__name__ == "Tiger"]
+#         result.extend([f"----- {len(tigers)} Tigers:"])
+#         result.extend(tigers)
+#
+#         cheetahs = [a.__repr__() for a in self.animals if a.__class__.__name__ == "Cheetah"]
+#         result.extend([f"----- {len(cheetahs)} Cheetahs:"])
+#         result.extend(cheetahs)
+#
+#         return "\n".join(result)
