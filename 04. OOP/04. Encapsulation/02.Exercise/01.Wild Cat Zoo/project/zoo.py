@@ -69,8 +69,8 @@ class Zoo:
         print_output = f"You have {len(self.animals)} animals\n"
 
         for (class_name, names) in animals_print_order:
-            amount = self.__count_amount(class_name, self.animals)
-            print_output += f"----- {amount} {names}:" + "\n"
+            class_name_count = self.__count_amount(class_name, self.animals)
+            print_output += f"----- {class_name_count} {names}:" + "\n"
             print_output += self.__str_obj_output(class_name, self.animals)
 
         return print_output.rstrip("\n")
@@ -85,8 +85,8 @@ class Zoo:
         print_output = f"You have {len(self.workers)} workers\n"
 
         for class_name, names in workers_print_order:
-            amount = self.__count_amount(class_name, self.workers)
-            print_output += f"----- {amount} {names}:" + "\n"
+            class_name_count = self.__count_amount(class_name, self.workers)
+            print_output += f"----- {class_name_count} {names}:" + "\n"
             print_output += self.__str_obj_output(class_name, self.workers)
 
         return print_output.rstrip("\n")
