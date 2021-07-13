@@ -49,28 +49,46 @@ class Zoo:
     def profit(self, amount):
         self.__budget += amount
 
+    @staticmethod
+    def __str_obj_output(class_name, objects):
+        print_output = "\n".join([f"{repr(obj)}" for obj in objects if type(obj).__name__ == class_name]) + "\n"
+        return print_output
+
+    @staticmethod
+    def __count_amount(class_name, objects):
+        amount = sum(map(lambda x: type(x).__name__ == class_name, objects))
+        return amount
+
     def animals_status(self):
-        animals_print_order = ("Lion", "Tiger", "Cheetah",)
+        animals_print_order = (
+            ("Lion", "Lions"),
+            ("Tiger", "Tigers"),
+            ("Cheetah", "Cheetahs"),
+        )
+
         print_output = f"You have {len(self.animals)} animals\n"
-        for class_name in animals_print_order:
-            animals_count = sum(map(lambda x: type(x).__name__ == class_name, self.animals))
-            print_output += f"----- {animals_count} {class_name}" + "\n"
-            print_output += "\n".join([
-                f"{repr(animal)}"
-                for animal in self.animals
-                if type(animal).__name__ == class_name]) + "\n"
+
+        for (class_name, names) in animals_print_order:
+            amount = self.__count_amount(class_name, self.animals)
+            print_output += f"----- {amount} {names}:" + "\n"
+            print_output += self.__str_obj_output(class_name, self.animals)
+
         return print_output.rstrip("\n")
 
     def workers_status(self):
-        workers_print_order = ["Keeper", "Karetaker", "Vet", ]
+        workers_print_order = (
+            ("Keeper", "Keepers"),
+            ("Caretaker", "Caretakers"),
+            ("Vet", "Vets"),
+        )
+
         print_output = f"You have {len(self.workers)} workers\n"
-        for class_name in workers_print_order:
-            workers_count = sum(map(lambda x: type(x).__name__ == class_name, self.workers))
-            print_output += f"----- {workers_count} {class_name}"
-            print_output += "\n".join([
-                f"{repr(worker)}"
-                for worker in self.workers
-                if type(worker).__name__ == class_name]) + "\n"
+
+        for class_name, names in workers_print_order:
+            amount = self.__count_amount(class_name, self.workers)
+            print_output += f"----- {amount} {names}:" + "\n"
+            print_output += self.__str_obj_output(class_name, self.workers)
+
         return print_output.rstrip("\n")
 
 # def animals_status(self):
