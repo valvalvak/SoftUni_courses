@@ -1,6 +1,8 @@
-from project.food.food import Food
+from project.food.main_dish import MainDish
 
 
-class MainDish(Food):
+class Salmon(MainDish):
+    GRAMS = 22  # (constant)
+
     def __init__(self, name: str, price: float, grams: float):
         super().__init__(name, price, grams)
