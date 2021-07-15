@@ -6,5 +6,5 @@ class Cake(Dessert):
     CALORIES = 1000  # (constant)
     PRICE = 5  # (constant)
 
-    def __init__(self, name: str, price: float, grams: float, calories: float):
-        super().__init__(name, price, grams, calories)
+    def __init__(self, name: str):
+        super().__init__(name, Cake.PRICE, Cake.GRAMS, Cake.CALORIES)

@@ -5,8 +5,8 @@ class Coffee(HotBeverage):
     MILLILITERS = 50  # (constant)
     PRICE = 3.50  # (constant)
 
-    def __init__(self, name: str, price: float, milliliters: float, caffeine: float):
-        super().__init__(name, price, milliliters)
+    def __init__(self, name: str, caffeine: float):
+        super().__init__(name, Coffee.PRICE, Coffee.MILLILITERS)
         self.caffeine = caffeine
 
     @property
