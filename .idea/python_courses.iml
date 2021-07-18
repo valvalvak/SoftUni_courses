@@ -27,6 +27,7 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/02.Pizza Maker" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/03. Football Team Generator" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/04. Restaurant" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
