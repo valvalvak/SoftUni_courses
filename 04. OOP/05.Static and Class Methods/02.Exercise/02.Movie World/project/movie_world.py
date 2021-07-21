@@ -4,12 +4,12 @@ from project.customer import Customer
 from project.dvd import DVD
 
 
-def is_dvd_rent_by_customer():
-    pass
-
-
-def is_customer_allowed_to_rent_dvd():
-    pass
+# def is_dvd_rent_by_customer():
+#     pass
+#
+#
+# def is_customer_allowed_to_rent_dvd():
+#     pass
 
 
 class MovieWorld:
@@ -37,7 +37,7 @@ class MovieWorld:
     def rent_dvd(self, customer_id: int, dvd_id: int):
         pass
 
-    def reutn_dvd(self):
+    def return_dvd(self):
         pass
 
     def __repr__(self):

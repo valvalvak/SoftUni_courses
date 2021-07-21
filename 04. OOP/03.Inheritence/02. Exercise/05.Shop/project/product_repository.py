@@ -1,8 +1,3 @@
-from project.drink import Drink
-from project.food import Food
-from project.product import Product
-
-
 class ProductRepository:
     def __init__(self):
         self.products = []
