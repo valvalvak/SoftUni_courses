@@ -4,15 +4,10 @@ from project.customer import Customer
 from project.dvd import DVD
 
 
-# def is_dvd_rent_by_customer():
-#     pass
-#
-#
-# def is_customer_allowed_to_rent_dvd():
-#     pass
-
-
 class MovieWorld:
+    DVD_CAPACITY = 15
+    CUSTOMER_CAPACITY = 10
+
     def __init__(self, name: str):
         self.name = name
         self.customers: List = []
@@ -20,11 +15,11 @@ class MovieWorld:
 
     @staticmethod
     def dvd_capacity():
-        return 15
+        return MovieWorld.DVD_CAPACITY
 
     @staticmethod
     def customer_capacity():
-        return 10
+        return MovieWorld.CUSTOMER_CAPACITY
 
     def add_customer(self, customer: Customer):
         if self.customer_capacity() > len(self.customers):
@@ -39,7 +34,6 @@ class MovieWorld:
         customer = list(map(lambda x: x.id == customer_id, self.customers))
         if customer[0].age < dvd[0].age_restriction:
             pass
-
 
     def return_dvd(self):
         pass
