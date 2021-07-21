@@ -8,7 +8,10 @@ class Customer:
         self.id = id
         self.rented_dvds: List = []
 
-    def rented_dvds(self, dvd):
+    def get_rented_dvds(self):
+        return self.rented_dvds
+
+    def add_rented_dvds(self):
         return self.rented_dvds.append(dvd)
 
     def __repr__(self):
