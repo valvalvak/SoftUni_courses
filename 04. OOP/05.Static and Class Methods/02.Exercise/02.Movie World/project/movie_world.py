@@ -35,7 +35,11 @@ class MovieWorld:
             self.dvds.append(dvd)
 
     def rent_dvd(self, customer_id: int, dvd_id: int):
-        pass
+        dvd = list(map(lambda x: x.id == dvd_id, self.dvds))
+        customer = list(map(lambda x: x.id == customer_id, self.customers))
+        if customer[0].age < dvd[0].age_restriction:
+            pass
+
 
     def return_dvd(self):
         pass

@@ -8,6 +8,9 @@ class Customer:
         self.id = id
         self.rented_dvds: List = []
 
+    def rented_dvds(self, dvd):
+        return self.rented_dvds.append(dvd)
+
     def __repr__(self):
         dvds_count = len(self.rented_dvds)
         repr_dvd_list = ', '.join([x for x in self.rented_dvds])
