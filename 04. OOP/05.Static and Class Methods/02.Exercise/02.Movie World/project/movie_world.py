@@ -52,7 +52,13 @@ class MovieWorld:
                 return f"{customer.name} has successfully rented {dvd.name}"
 
     def return_dvd(self, customer_id, dvd_id):
-        if ...:
+        dvd = list(map(lambda x: x.id == dvd_id, self.dvds))
+        customer = list(map(lambda x: x.id == customer_id, self.customers))
+        if len(dvd) > 0:
+            dvd = dvd[0]
+        if len(customer) > 0:
+            customer = customer[0]
+        for dvd in customer.rented_dvds:
             return "{customer_name} has successfully returned {dvd_name}"
         if ...:
             return "{customer_name} does not have that DVD"
