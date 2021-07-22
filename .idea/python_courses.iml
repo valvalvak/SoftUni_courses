@@ -12,21 +12,10 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/06. Guild System" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/07. Spoopify" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/08. Library" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/01.Person" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/02.Zoo" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/03.Players and Monsters" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/05.Shop" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/02.Single Inheritance" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/03.Multiple Inheritance" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/04.Multilevel Inheritance" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/05.Hierarchical Inheritance" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/06.Stack of Strings" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/01.Wild Cat Zoo" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/02.Pizza Maker" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/03. Football Team Generator" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04. Encapsulation/02.Exercise/04. Restaurant" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/02.Movie World" />
     </content>
