@@ -25,4 +25,4 @@ class DVD:
             _is_rented = "not rented"
         res = f"{self.id}: {self.name} ({self.creation_month} {self.creation_year})" \
               f" has age restriction {self.age_restriction}. Status: {_is_rented}"
-        return res
+        return res.strip()
