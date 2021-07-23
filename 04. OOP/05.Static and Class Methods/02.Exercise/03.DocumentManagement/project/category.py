@@ -8,4 +8,4 @@ class Category:
 
     def __repr__(self):
         """returns a string representation of the category in the following format"""
-        return "Category {id}: {name}"
+        return f"Category {self.id}: {self.name}"

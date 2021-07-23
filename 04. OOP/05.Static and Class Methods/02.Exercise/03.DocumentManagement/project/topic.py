@@ -10,4 +10,4 @@ class Topic:
 
     def __repr__(self):
         """returns a string representation of the topic in the format"""
-        return "Topic {id}: {topic} in {storage_folder}"
+        return f"Topic {self.id}: {self.topic} in {self.storage_folder}"
