@@ -5,20 +5,39 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/05.Animals" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/04.Wild Farm" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/03. Account" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/05. To-do List" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/06. Guild System" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/07. Spoopify" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/08. Library" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/01.Wild Cat Zoo" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/02.Pizza Maker" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/03.Football Team Generator" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/04.Restaurant" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/02.Movie World" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/03.DocumentManagement" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/04.Gym" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/01.Robots" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/02.Encryption Generator" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/03.Image Area" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/04.Playing" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/05.Shapes" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/01.Vehicle" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/02.Groups" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/03.Account" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/07.SOLID/02.Exercise" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/hero" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/mammal" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/vehicle" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/01. Vet" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/02. Time" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/03. Account" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/04. Pizza Delivery" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/05. To-do List" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/06. Guild System" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/07. Spoopify" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/08. Library" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/05.Hierarchical Inheritance" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/06.Stack of Strings" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
