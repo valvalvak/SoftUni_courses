@@ -31,6 +31,8 @@
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/mammal" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/vehicle" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/CarManager" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
