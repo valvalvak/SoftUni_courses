@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 
-from project.cat import Cat
+from cat import Cat
 
 
 class CatTests(TestCase):

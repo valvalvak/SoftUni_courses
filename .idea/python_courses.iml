@@ -3,12 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/hero" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/mammal" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/vehicle" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat/project" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List/integer_list" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
@@ -44,6 +40,16 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/05.Shapes" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/07.SOLID/02.Exercise" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/CarManager" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/hero" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/mammal" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/vehicle" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/01.Calculator" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/02.Shop" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/03.Integer" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
