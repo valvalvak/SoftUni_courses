@@ -3,7 +3,19 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat/project" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List/integer_list" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/05.Hierarchical Inheritance" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/06.Stack of Strings" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/01.Wild Cat Zoo" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/02.Pizza Maker" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/03.Football Team Generator" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/04.Encapsulation/02.Exercise/04.Restaurant" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/01. Vet" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/02. Time" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/03. Account" />
@@ -12,11 +24,32 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/06. Guild System" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/07. Spoopify" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/08. Library" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/05.Hierarchical Inheritance" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/06.Stack of Strings" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/01.Photo Album" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/02.Movie World" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/03.DocumentManagement" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/04.Gym" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/01.Vehicle" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/02.Groups" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/03.Account" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/04.Wild Farm" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/05.Animals" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/01.Robots" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/02.Encryption Generator" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/03.Image Area" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/04.Playing" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/01.Lab/05.Shapes" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/07.SOLID/02.Exercise" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/CarManager" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/hero" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/mammal" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/student" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise-Resources/vehicle" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/01.Calculator" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/02.Shop" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/03.Integer" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/01.Lab/04.Hotel Rooms" />
+      <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
