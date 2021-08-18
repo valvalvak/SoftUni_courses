@@ -14,15 +14,11 @@ TARGET_POINTS = 10
 def make_matrix(value):
     matrix_res = []
     allice_position = ()
-    rabbit_hole_position = ()
     for row in range(value):
         matrix_res.append([x for x in input().split(" ")])
         if ALLICE in matrix_res[row]:
             allice_position = (row, matrix_res[row].index(ALLICE))
-        elif RABBIT_HOLE in matrix_res[row]:
-            rabbit_hole_position = (row, matrix_res[row].index(RABBIT_HOLE))
-
-    return matrix_res, allice_position, rabbit_hole_position
+    return matrix_res, allice_position
 
 
 def movement(command, move_directions):
@@ -51,31 +47,32 @@ def get_breack_case(next_move_row, next_move_col, matrix):
         return True
 
 
+def make_trail(matrix, row, col):
+    matrix[row][col] = PATH_TRAIL
+
+
 def main(matrix, allice_position):
     points = 0
     last_row_pos, last_col_pos = allice_position
-    allice = (last_row_pos, last_col_pos)
     while True:
-        if points >= TARGET_POINTS:
-            print("She did it! She went to the party.")
-            break
-        else:
-            command = input()
-        next_move_row, next_move_col = get_next_pos(allice, movement(command, MOVE_DIRECTIONS))
+        command = input()
+        next_move_row, next_move_col = get_next_pos(allice_position, movement(command, MOVE_DIRECTIONS))
+        make_trail(matrix, last_row_pos, last_col_pos)
+
         if get_breack_case(next_move_row, next_move_col, matrix):
             print("Alice didn't make it to the tea party.")
             break
         elif matrix[next_move_row][next_move_col] == EMPTY_SLOT:
-            allice = (next_move_row, next_move_col)
-            matrix[last_row_pos][last_col_pos] = PATH_TRAIL
-            matrix[next_move_row][next_move_col] = PATH_TRAIL
+            allice_position = (next_move_row, next_move_col)
+            make_trail(matrix, next_move_row, next_move_col)
         elif matrix[next_move_row][next_move_col] == PATH_TRAIL:
-            allice = (next_move_row, next_move_col)
+            allice_position = (next_move_row, next_move_col)
         elif matrix[next_move_row][next_move_col].isdigit():
             points += int(matrix[next_move_row][next_move_col])
-            allice = (next_move_row, next_move_col)
-            matrix[last_row_pos][last_col_pos] = PATH_TRAIL
-            matrix[next_move_row][next_move_col] = PATH_TRAIL
+            make_trail(matrix, next_move_row, next_move_col)
+            if points >= TARGET_POINTS:
+                print("She did it! She went to the party.")
+                break
     return points, matrix
 
 
@@ -84,6 +81,6 @@ def print_matrix_solution(matrix):
         print(f"{' '.join([x for x in row])}")
 
 
-matrix, allice_position, rabbit_hole_position = make_matrix(int(input()))
+matrix, allice_position = make_matrix(int(input()))
 points, new_matrix = main(matrix, allice_position)
 print_matrix_solution(new_matrix)

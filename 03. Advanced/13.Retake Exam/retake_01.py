@@ -10,7 +10,7 @@ def collect_honey(value_a, value_b, str_symbol):
     elif str_symbol == "*":
         return value_a * value_b
     elif str_symbol == "/":
-        return value_a // value_b
+        return value_a / value_b
 
 
 def get_int_ques(list_input):
