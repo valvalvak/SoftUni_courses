@@ -101,12 +101,12 @@ def main(field, lines_count, all_targets=0, targets_shot=0):
     return all_targets, targets_shot
 
 
-def print_solution(all_targets, targets_shot, TARGET_SHOTS_INDICES):
-    if targets_shot < all_targets:
-        print(f"Training not completed! {all_targets - targets_shot} targets left.")
+def print_solution(all_the_targets, all_targets_shot, ALL_TARGET_SHOTS_INDICES):
+    if all_targets_shot < all_the_targets:
+        print(f"Training not completed! {all_the_targets - all_targets_shot} targets left.")
     else:
-        print(f"Training completed! All {all_targets} targets hit.")
-    for location in TARGET_SHOTS_INDICES:
+        print(f"Training completed! All {all_the_targets} targets hit.")
+    for location in ALL_TARGET_SHOTS_INDICES:
         print(location)
 
 
