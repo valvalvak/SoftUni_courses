@@ -61,11 +61,11 @@ class SpaceStation:
             raise Exception("Invalid planet name!")
         astronauts_on_mission = deque()
         for astronaut in sorted(self.astronaut_repository.astronauts, key=lambda x: x.oxygen, reverse=True):
-            if astronaut.oxygen >= 30 and len(astronauts_on_mission) < 5:
+            if astronaut.oxygen >= 30 and len(astronauts_on_mission) < 6:
                 astronauts_on_mission.append(astronaut)
             else:
                 break
-        if not len(astronauts_on_mission) >= 1:
+        if not len(astronauts_on_mission) > 0:
             raise Exception("You need at least one astronaut to explore the planet!")
         astronauts_count = len(astronauts_on_mission)
         current_astronaut = astronauts_on_mission.popleft()
@@ -91,3 +91,4 @@ class SpaceStation:
                 result += f"Backpack items: {', '.join([item for item in astronaut.backpack])}\n"
             else:
                 result += 'Backpack items: "none"\n'
+        return result
