@@ -60,15 +60,16 @@ class Survivor:
             self.__needs = value
 
 
-# s = Survivor("Test", 10)
-#
-# print(s.health)
-# s.health = 80
-# print(s.health)
-# s.health += 100
-# s.health = s.health + 100
-# print(s.health)
+s = Survivor("Test", 10)
 
+print(s.health)
+s.health = 80
+print(s.needs_healing)
+print(s.health)
+s.health += 100
+# s.health = s.health + 100
+print(s.health)
+print(s.needs_healing)
 
 
 
