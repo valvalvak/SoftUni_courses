@@ -23,10 +23,6 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/06. Guild System" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/07. Spoopify" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/02.Classes and Objects/02.Exercise/08. Library" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/01.Photo Album" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/02.Movie World" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/03.DocumentManagement" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/05.Static and Class Methods/02.Exercise/04.Gym" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/01.Vehicle" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/02.Groups" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/06.Polymorphism and Abstraction/02.Exercises/03.Account" />
@@ -47,8 +43,6 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/retake_exam_oop_test" />
-      <excludeFolder url="file://$MODULE_DIR$/04. OOP/retake_exam_oop" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

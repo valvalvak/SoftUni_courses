@@ -32,8 +32,8 @@ class Bakery:
             food_order = Bread(name, price)
         elif food_type == "Cake":
             food_order = Cake(name, price)
-        for oredering_food in self.food_menu:
-            if oredering_food.name == name:
+        for ordering_food in self.food_menu:
+            if ordering_food.name == name:
                 raise Exception(f"{food_type} {name} is already in the menu!")
         if food_order:
             self.food_menu.append(food_order)
