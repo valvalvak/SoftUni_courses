@@ -5,7 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/Cat/project" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List/integer_list" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Retake_11_Dec_2021" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/02. Exercise/04.Need for Speed" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/01.Food" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/03. Inheritence/01.Lab/05.Hierarchical Inheritance" />
@@ -46,12 +46,13 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/01.Lab/List" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/project/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/venv" />
-      <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/.idea/shelf" />
       <excludeFolder url="file://$MODULE_DIR$/venv/Lib" />
       <excludeFolder url="file://$MODULE_DIR$/venv/Scripts" />
-      <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/Retake_20_Dec_2021" />
+      <excludeFolder url="file://$MODULE_DIR$/Retake_20_Dec_2021/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/Retake_20_Dec_2021/.idea/shelf" />
+      <excludeFolder url="file://$MODULE_DIR$/Retake_20_Dec_2021/project/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Retake_20_Dec_2021/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
