@@ -47,6 +47,9 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/project/venv" />
       <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/Exam_Retake_20_Dec_2021/.idea/shelf" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/Lib" />
+      <excludeFolder url="file://$MODULE_DIR$/venv/Scripts" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
