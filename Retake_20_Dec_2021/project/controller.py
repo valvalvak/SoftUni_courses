@@ -28,8 +28,8 @@ class Controller:
             return self._message + ', '.join(name for name in added)
         return self._message
 
-    def add_supply(self, *supplys_obj_que: Supply):
-        for obj in supplys_obj_que:
+    def add_supply(self, *supply_obj_que: Supply):
+        for obj in supply_obj_que:
             self.supplies.append(obj)
 
     def sustain(self, player_name: str, sustenance_type: str):
