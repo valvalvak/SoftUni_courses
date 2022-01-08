@@ -9,21 +9,21 @@ class Supply(ABC):
 
     @property
     def name(self):
-        return self.name
+        return self.__name
 
     @name.setter
     def name(self, value):
-        value = value.strip
-        if value == "":
+        name = value.strip()
+        if name == "":
             raise ValueError("Name cannot be an empty string.")
-        self.name = value
+        self.__name = name
 
     @property
     def energy(self):
-        return self.energy
+        return self.__energy
 
     @energy.setter
     def energy(self, value):
         if value < 0:
             raise ValueError("Energy cannot be less than zero.")
-        self.energy = value
+        self.__energy = value
