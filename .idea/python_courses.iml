@@ -44,7 +44,7 @@
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/04. OOP/10.Testing/02.Exercise/Exercise_Resources/student/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
